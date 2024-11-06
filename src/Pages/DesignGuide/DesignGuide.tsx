@@ -2,7 +2,7 @@ import React from "react";
 import Table from "../../Components/Table/Table";
 import RatioList from "../../Components/RatioList/RatioList";
 import { TestDataCompany } from "../../Components/Table/testData";
-import { CompanyKeyMetrics } from "../../company";
+// import { CompanyKeyMetrics } from "../../company";
 
 type Props = {};
 
@@ -19,7 +19,7 @@ const DesignGuide = (props: Props) => {
   return (
     <>
       <h1>
-        Design guide- This is the design guide for Fin Shark. These are reuable
+        Design guide- This is the design guide for Finanseer. These are reusable
         components of the app with brief instructions on how to use them.
       </h1>
       <RatioList config={tableConfig} data={data} />

@@ -13,6 +13,7 @@ module.exports = {
         lightBlue: "hsl(215.02, 98.39%, 51.18%)",
         darkBlue: "hsl(213.86, 58.82%, 46.67%)",
         lightGreen: "hsl(156.62, 73.33%, 58.82%)",
+        customGradient: 'linear-gradient(to right, #ff7e5f, #feb47b)'
       },
       fontFamily: {
         sans: ["Poppins", "sans-serif"],
