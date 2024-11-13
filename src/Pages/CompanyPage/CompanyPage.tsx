@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { CompanyProfile } from "../../company";
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { getCompanyProfile } from "../../api";
 import Sidebar from "../../Components/Sidebar/Sidebar";
 import CompanyDashboard from "../../Components/CompanyDashboard/CompanyDashboard";
 import Tile from "../../Components/Tile/Tile";
 import Spinner from "../../Components/Spinners/Spinner";
-import CompFinder from "../../Components/CompFinder/CompFinder";
+// import CompFinder from "../../Components/CompFinder/CompFinder";
 import TenKFinder from "../../Components/TenKFinder/TenKFinder";
 
 interface Props {}
@@ -22,7 +22,7 @@ const CompanyPage = (props: Props) => {
       setCompany(result?.data[0]);
     };
     getProfileInit();
-  }, []);
+  }, [ticker]);
 
   return (
     <>
@@ -34,7 +34,7 @@ const CompanyPage = (props: Props) => {
             <Tile title="Price" subTitle={"$" + company.price.toString()} />
             <Tile title="DCF" subTitle={"$" + company.dcf.toString()} />
             <Tile title="Sector" subTitle={company.sector} />
-            <CompFinder ticker={company.symbol} />
+            {/* <CompFinder ticker={company.symbol} /> */}
             <TenKFinder ticker={company.symbol} />
             <p className="bg-white shadow rounded text-medium font-medium text-gray-900 p-3 mt-1 m-4">
               {company.description}
