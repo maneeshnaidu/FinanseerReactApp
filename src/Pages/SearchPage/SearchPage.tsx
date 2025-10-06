@@ -13,7 +13,7 @@ import {
 } from "../../Services/PortfolioService";
 import { toast } from "react-toastify";
 
-interface Props {}
+interface Props { }
 
 const SearchPage = (props: Props) => {
   const [search, setSearch] = useState<string>("");
@@ -60,7 +60,7 @@ const SearchPage = (props: Props) => {
   const onPortfolioDelete = (e: any) => {
     e.preventDefault();
     portfolioDeleteAPI(e.target[0].value).then((res) => {
-      if (res?.status == 200) {
+      if (res?.status === 200) {
         toast.success("Stock deleted from portfolio!");
         getPortfolio();
       }
