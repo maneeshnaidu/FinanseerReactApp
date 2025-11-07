@@ -3,6 +3,7 @@ import { PortfolioGet, PortfolioPost } from "../Models/Portfolio";
 import { handleError } from "../Helpers/ErrorHandler";
 
 const api = "https://finanseerapi-8i38.onrender.com/api/portfolio/";
+// const api = "http://localhost:5167/api/portfolio/";
 
 export const portfolioAddAPI = async (symbol: string) => {
   try {
